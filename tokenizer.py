@@ -1,13 +1,16 @@
 import nltk
 import string
+import sys
 from nltk.corpus import stopwords
 
 # run once for each file you wish to change, update input/output names accordingly
 
-# change this to the filepath of your input
-reader = open('/FILEPATH', 'r')
+# takes first argument as infile path
+inFilePath = sys.argv[1]
+reader = open(inFilePath, 'r')
 # change this to the filepath of your output with desired name; if no file is already there it will make it
-target = open('/FILEPATH', 'w')
+outFilePath = sys.argv[2]
+target = open(outFilePath, 'w')
 
 stop_words = {'the', 'a', 'and', 'but', 'it', 's', 'd', 'to', 'for', 'of', 'like', 'he', 'she', 'is', 'are', '?', '(', ')', 'i', 'we', '\\', '\'', ',', ',', '`', '\'s', '``', '\'\'', '[', ']', '{', '}', '-', '^', ';', '_', '+', ':'}
 
@@ -29,4 +32,3 @@ for line in reader:
     
 
 target.close()
-
