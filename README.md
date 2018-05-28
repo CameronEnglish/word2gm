@@ -1,28 +1,17 @@
 # Word2GM (Word to Gaussian Mixture)
 
-This is an implementation of the model in *[Athiwaratkun and Wilson](https://arxiv.org/abs/1704.08424), Multimodal Word Distributions, ACL 2017*.
+This is an implementation of the model in *[Athiwaratkun and Wilson](https://arxiv.org/abs/1704.08424), Multimodal Word Distributions, ACL 2017* with slight modifications to focus on examining the implications of higher K values, particularly with reference to the problem of acronym word-sense disambiguation.
 
-We represent each word in the dictionary as a Gaussian Mixture distribution and train it using a max-margin objective based on expected likelihood kernel energy function.
-
-The BibTeX entry for the paper is:
-
-```bibtex
-@InProceedings{athiwilson2017,
-    author = {Ben Athiwaratkun and Andrew Gordon Wilson},
-    title = {Multimodal Word Distributions},
-    booktitle = {Conference of the Association for Computational Linguistics (ACL)},
-    year = {2017}
-}
 ```
 
 ## Training Data
 The data used in the paper is the concatenation of *ukWaC* and *WaCkypedia_EN*, both of which can be requested [here](http://wacky.sslmit.unibo.it/doku.php?id=download).
 
-We include a script **get_text8.sh** to download a small dataset **text8** which can be used to train word embeddings. We note that we can observe the polysemies behaviour even on a small dataset such as text8. That is, some word such as 'rock' has one Gaussian component being close to 'jazz', 'pop', 'blue' and another Gaussian component close to 'stone', 'sediment', 'basalt', etc.
+Additional training on the English language Wikipedia was performed.
 
 
 ## Dependencies
-Tensorflow 0.12 (version number important)
+Tensorflow 0.12 (version number important -- Skipgram functionality issue otherwise)
 
 [ggplot](https://github.com/yhat/ggplot.git)
 ```
@@ -32,12 +21,6 @@ conda install -c conda-forge ggplot
 # or
 pip install git+https://github.com/yhat/ggplot.git
 ```
-
-## Training
-
-For text8, the training script with the proper hyperparameters are in **train_text8.sh**
-
-For UKWAC+Wackypedia, the training script **train_wac.sh** contains our command to replicate the results.
 
 
 ## Steps
