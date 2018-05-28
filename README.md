@@ -142,4 +142,3 @@ To train on a very large dataset, we provide a version of Tensorflow (0.11.0rc1)
    --nonormclip
  
  ```
- Lock conversation
