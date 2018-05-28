@@ -2,7 +2,7 @@
 
 This is an implementation of the model in *[Athiwaratkun and Wilson](https://arxiv.org/abs/1704.08424), Multimodal Word Distributions, ACL 2017* with slight modifications to focus on examining the implications of higher K values, particularly with reference to the problem of acronym word-sense disambiguation.
 
-
+TODO: find workaround to Protobuf 32-bit signed int limiation
 
 ## Training Data
 The data used in the paper is the concatenation of *ukWaC* and *WaCkypedia_EN*, both of which can be requested [here](http://wacky.sslmit.unibo.it/doku.php?id=download).
