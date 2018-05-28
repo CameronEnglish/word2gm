@@ -64,81 +64,82 @@ To train on a very large dataset, we provide a version of Tensorflow (0.11.0rc1)
 
 
 
-## Training Options
-
-```
-arguments:
-  -h, --help            show this help message and exit
-  --save_path SAVE_PATH
-                        Directory to write the model and training summaries.
-                        (required)
-  --train_data TRAIN_DATA
-                        Training text file. (required)
-  --embedding_size EMBEDDING_SIZE
-                        The embedding dimension size.
-  --epochs_to_train EPOCHS_TO_TRAIN
-                        Number of epochs to train. Each epoch processes the
-                        training data once completely.
-  --learning_rate LEARNING_RATE
-                        Initial learning rate.
-  --batch_size BATCH_SIZE
-                        Number of training examples processed per step (size
-                        of a minibatch).
-  --concurrent_steps CONCURRENT_STEPS
-                        The number of concurrent training steps.
-  --window_size WINDOW_SIZE
-                        The number of words to predict to the left and right
-                        of the target word.
-  --min_count MIN_COUNT
-                        The minimum number of word occurrences for it to be
-                        included in the vocabulary.
-  --subsample SUBSAMPLE
-                        Subsample threshold for word occurrence. Words that
-                        appear with higher frequency will be randomly down-
-                        sampled. Set to 0 to disable.
-  --statistics_interval STATISTICS_INTERVAL
-                        Print statistics every n seconds.
-  --summary_interval SUMMARY_INTERVAL
-                        Save training summary to file every n seconds (rounded
-                        up to statistics interval).
-  --checkpoint_interval CHECKPOINT_INTERVAL
-                        Checkpoint the model (i.e. save the parameters) every
-                        n seconds (rounded up to statistics interval).
-  --num_mixtures NUM_MIXTURES
-                        Number of mixture component for Mixture of Gaussians
-  --spherical [SPHERICAL]
-                        Whether the model should be spherical of diagonalThe
-                        default is spherical
-  --nospherical
-  --var_scale VAR_SCALE
-                        Variance scale
-  --ckpt_all [CKPT_ALL]
-                        Keep all checkpoints(Warning: This requires a large
-                        amount of disk space).
-  --nockpt_all
-  --norm_cap NORM_CAP   The upper bound of norm of mean vector
-  --lower_sig LOWER_SIG
-                        The lower bound for sigma element-wise
-  --upper_sig UPPER_SIG
-                        The upper bound for sigma element-wise
-  --mu_scale MU_SCALE   The average norm will be around mu_scale
-  --objective_threshold OBJECTIVE_THRESHOLD
-                        The threshold for the objective
-  --adagrad [ADAGRAD]   Use Adagrad optimizer instead
-  --noadagrad
-  --loss_epsilon LOSS_EPSILON
-                        epsilon parameter for loss function
-  --constant_lr [CONSTANT_LR]
-                        Use constant learning rate
-  --noconstant_lr
-  --wout [WOUT]         Whether we would use a separate wout
-  --nowout
-  --max_pe [MAX_PE]     Using maximum of partial energy instead of the sum
-  --nomax_pe
-  --max_to_keep MAX_TO_KEEP
-                        The maximum number of checkpoint files to keep
-  --normclip [NORMCLIP]
-                        Whether to perform norm clipping (very slow)
-  --nonormclip
-
-```
+ ## Training Options
+ 
+ ```
+ arguments:
+   -h, --help            show this help message and exit
+   --save_path SAVE_PATH
+                         Directory to write the model and training summaries.
+                         (required)
+   --train_data TRAIN_DATA
+                         Training text file. (required)
+   --embedding_size EMBEDDING_SIZE
+                         The embedding dimension size.
+   --epochs_to_train EPOCHS_TO_TRAIN
+                         Number of epochs to train. Each epoch processes the
+                         training data once completely.
+   --learning_rate LEARNING_RATE
+                         Initial learning rate.
+   --batch_size BATCH_SIZE
+                         Number of training examples processed per step (size
+                         of a minibatch).
+   --concurrent_steps CONCURRENT_STEPS
+                         The number of concurrent training steps.
+   --window_size WINDOW_SIZE
+                         The number of words to predict to the left and right
+                         of the target word.
+   --min_count MIN_COUNT
+                         The minimum number of word occurrences for it to be
+                         included in the vocabulary.
+   --subsample SUBSAMPLE
+                         Subsample threshold for word occurrence. Words that
+                         appear with higher frequency will be randomly down-
+                         sampled. Set to 0 to disable.
+   --statistics_interval STATISTICS_INTERVAL
+                         Print statistics every n seconds.
+   --summary_interval SUMMARY_INTERVAL
+                         Save training summary to file every n seconds (rounded
+                         up to statistics interval).
+   --checkpoint_interval CHECKPOINT_INTERVAL
+                         Checkpoint the model (i.e. save the parameters) every
+                         n seconds (rounded up to statistics interval).
+   --num_mixtures NUM_MIXTURES
+                         Number of mixture component for Mixture of Gaussians
+   --spherical [SPHERICAL]
+                         Whether the model should be spherical of diagonalThe
+                         default is spherical
+   --nospherical
+   --var_scale VAR_SCALE
+                         Variance scale
+   --ckpt_all [CKPT_ALL]
+                         Keep all checkpoints(Warning: This requires a large
+                         amount of disk space).
+   --nockpt_all
+   --norm_cap NORM_CAP   The upper bound of norm of mean vector
+   --lower_sig LOWER_SIG
+                         The lower bound for sigma element-wise
+   --upper_sig UPPER_SIG
+                         The upper bound for sigma element-wise
+   --mu_scale MU_SCALE   The average norm will be around mu_scale
+   --objective_threshold OBJECTIVE_THRESHOLD
+                         The threshold for the objective
+   --adagrad [ADAGRAD]   Use Adagrad optimizer instead
+   --noadagrad
+   --loss_epsilon LOSS_EPSILON
+                         epsilon parameter for loss function
+   --constant_lr [CONSTANT_LR]
+                         Use constant learning rate
+   --noconstant_lr
+   --wout [WOUT]         Whether we would use a separate wout
+   --nowout
+   --max_pe [MAX_PE]     Using maximum of partial energy instead of the sum
+   --nomax_pe
+   --max_to_keep MAX_TO_KEEP
+                         The maximum number of checkpoint files to keep
+   --normclip [NORMCLIP]
+                         Whether to perform norm clipping (very slow)
+   --nonormclip
+ 
+ ```
+ Lock conversation
