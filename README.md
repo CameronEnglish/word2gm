@@ -9,6 +9,12 @@ The data used in the paper is the concatenation of *ukWaC* and *WaCkypedia_EN*, 
 
 Additional training on the English language Wikipedia was performed.
 
+https://dumps.wikimedia.org/enwiki/latest/
+we use enwiki-latest-pages-articles.xml.bz2 from April 2nd
+un bz2 using lbzip2 -dk
+less filename is a nice way of viewing it
+clean the wikipedia dump using WikiExtractor -- 5602525 articles in 9241.1s (606.3 art/s)
+
 
 ## Dependencies
 Tensorflow 0.12 (version number important -- Skipgram functionality issue otherwise)
